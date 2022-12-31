@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_13_141828) do
     t.datetime "updated_at", null: false
     t.date "start_at"
     t.date "end_at"
-    t.date "is_all_day"
+    t.boolean "is_all_day"
     t.string "memo"
     t.string "not_before_today"
   end

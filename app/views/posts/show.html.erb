@@ -14,7 +14,11 @@
   <tr>
     <th>終日</th>
     <td>
-      <%= @post.is_all_day ? "◯" : "" %>
+      <% if @post.is_all_day == true %>
+        <%= "○" %>
+      <% else @post.is_all_day == false %>
+        <%= " " %>
+      <% end %>
     </td>
   </tr>
   <tr>
