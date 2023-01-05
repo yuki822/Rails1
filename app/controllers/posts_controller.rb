@@ -11,7 +11,6 @@ class PostsController < ApplicationController
       @posts = Post.all
     end
 
-
     def new
       @page_title = "スケジュール新規作成"
       @post = Post.new
@@ -24,12 +23,12 @@ class PostsController < ApplicationController
          #終了日
          #終日
          #スケジュールメモ
-      if @post.save!
+      if @post.save
         flash[:nortice] = "スケジュールを登録しました"
         redirect_to :posts
       else
         flash[:failure] = "スケジュールを登録できませんでした"
-        render "new"
+        render "new", status: :unprocessable_entity
       end
     end
 
