@@ -39,14 +39,30 @@ gem "jbuilder"
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
-# Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
-
 # Use Sass to process CSS
 # gem "sassc-rails"
 
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.4.2', require: false
+gem 'rails-i18n'
+
+# pry-rails install
+gem 'pry-rails'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+
+gem 'turbolinks', '~> 5'
+
+# turbolinks-rails install
+
+gem "sassc-rails"
+
+# "sassc-rails"
+
+gem 'webpacker', '~> 3.0'
+
+# "webpacker" install
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

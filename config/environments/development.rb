@@ -1,7 +1,11 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  # Verifies that versions and hashed value of the package contents in the project's package.json
+  config.webpacker.check_yarn_integrity = true
   # Settings specified here will take precedence over those in config/application.rb.
+
+  config.hosts << "02227f864228494f8d21f0cee62ede0c.vfs.cloud9.ap-northeast-1.amazonaws.com"
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
