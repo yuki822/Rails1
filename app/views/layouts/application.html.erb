@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myapp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag %>
+  </head>
+
+  <body>
+   <header>
+    <h1>Ruby on Rails スケジュール管理アプリ</h1>
+   </header>
+   <%= yield %>
+   <footer>
+    <h2>現在の日時：<%= Time.current.strftime('%Y-%m-%d %H:%M') %></h2>
+      <% case controller.action_name %>
+      <% when "index" %>
+        <h3 class="count">スケジュール合計：<%= @posts.count %></h3>
+      <% end %>
+   </footer>
+  </body>
+ </html>
